@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!--
+NOMBRE DEL SCRIPT: Cap3_2.html
+REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+FECHA DE CREACIÓN: 29/06/2020
+FECHA DE ÚLTIMA MODIFICACIÓN: 30/06/2020
+OBJETIVO: Calcular (y mostrar) la superficie de dos círculos de radios predeterminados (5,5 metros y 3,5 metros, por ejemplo)
+            y las diferencias entre sus dos superficies
+-->
+
+<!-- Inicio script HTML -->
+<html lang="es">
+    <!-- Inicio encabezado script HTML -->
+    <head>
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+
+        <!-- Título del script HTML -->
+        <title>Cap3_2</title>
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_2</h1>
+
+        <!-- Inicio script JavaScript -->
+        <script>
+
+            /* Mostrar el numero del script */
+            alert("Ejercicio Cap3_2");
+
+            /* Declaración de variables locales */
+            var radio1, radio2, pi, superficie1, superficie2, diferencia;
+
+            /* Inicialización de las variables */
+            radio1 = 5.5;
+            radio2 = 3.5;
+            pi = 3.14;
+
+            /* Cálculos */
+            superficie1 = pi * radio1 * radio1;
+            superficie2 = pi * radio2 * radio2;
+            diferencia = superficie1 - superficie2;
+
+            /* Mostrar los resultados */
+            document.write("Superficie 1: " + superficie1 + "<br />");
+            document.write("Superficie 2: " + superficie2 + "<br />");
+            alert("Diferencia: " + diferencia);
+
+        </script>
+
+        <!-- Mostrar el código fuente -->
+        <br /><br /><br />
+        <center>
+            <a href="JavaScript:window.location='view-source:'+window.location">
+                Código fuente
+            </a> 
+        </center>
+    </body>
+</html>

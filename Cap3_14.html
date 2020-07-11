@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 
+    NOMBRE DEL SCRIPT: Cap3_14.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA CREACIÓN: 10/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 10/07/2020
+    OBJETIVO: Determinar la cantidad de números pares en una tabla (entrada de datos inicial de valores con el teclado)
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap3_14</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_14</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Declaración de variables locales */
+            /*
+            i       : Contador de bucle
+            nbPares : Acumulado de la cantidad de número pares
+            tabla   : Tabla de números
+            */
+            var i, nbPares;
+            var tabla = new Array;
+
+            /* Inicializaciones */
+            nbPares = 0;
+            for (i=1; i<=5; i++)
+            {
+                tabla[i] = parseInt(prompt("tabla[" + i + "]: "));
+            }
+
+            /* Determinar la cantidad de números pares en la tabla */
+            for (i=1; i<=5; i++)
+            {
+                if (tabla[i]%2 == 0)
+                {
+                    nbPares = nbPares + 1;
+                }
+            }
+
+            /* Visualización del resultado */
+            document.write("La tabla contiene " + nbPares + " números pares");
+        </script>
+    </body>
+</html>

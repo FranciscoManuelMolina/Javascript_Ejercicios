@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap3_13.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 08/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 08/07/2020
+    OBJETIVO: Contar el número de vocales de una palabra introducida con el teclado.
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap3_13</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_13</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+
+            /* Declaración de variables locales */
+            var palabra, nb_vocales, contador;
+
+            /* Introducción de la palabra */
+            palabra = prompt("Palabra:");
+
+            /* Conversión en mayúsculas (para evitar hacer 12 comprobaciones */
+            palabra = palabra.toUpperCase();
+
+            /* Inicialización de las variables */
+            nb_vocales = 0;
+
+            /* Determinación del número de vocales */
+            for (contador=0; contador<=palabra.length; contador++)
+            {
+                switch (palabra.charAt(contador))
+                {
+                    case "A":
+                        nb_vocales = nb_vocales + 1;
+                        break;
+                    case "E":
+                        nb_vocales = nb_vocales + 1;
+                        break;
+                    case "I":
+                        nb_vocales = nb_vocales + 1;
+                        break;
+                    case "O":
+                        nb_vocales = nb_vocales + 1;
+                        break;
+                    case "U":
+                        nb_vocales = nb_vocales + 1;
+                        break;
+                }
+            }
+
+            /* Visualización del resultado */
+            document.write(palabra + " contiene " + nb_vocales + " vocales");
+        </script>
+    </body>
+</html>

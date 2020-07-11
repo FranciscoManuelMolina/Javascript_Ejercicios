@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap3_6.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 02/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 02/07/2020
+    OBJETIVO: Calcular las raíces de un polinomio de segundo grado Ax2+Bx+C (con A<>0 en valor absoluto, aunque esta
+    prueba no se realiza aquí). Los valores A, B y C se introducirán con el teclado.
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+      
+        <!-- Etiqueta Meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+        <!-- Título del script HTML-->
+        <title>Cap3_6</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3-6</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Declaración variables*/
+            var a, b, c, delta;
+
+            /* Introducción de los argumentos */
+            a = prompt("a:");
+            b = prompt("b:");
+            c = prompt("c:");
+
+            /* Cálculo del discriminante */
+            delta = (parseInt(b)) - (4 * parseInt(a) * parseInt(c));
+
+            /* Visualización de los argumentos */
+            document.write("a: " + a + "<br />");
+            document.write("b: " + b + "<br />");
+            document.write("c: " + c + "<br />");
+            document.write("Discriminante delta: " + delta + "<br />");
+
+            /* Determinación de las raices */
+            if (delta < 0)
+            {
+                document.write("Sin soluciones");
+            }
+            else
+            {
+                if (delta == 0)
+                {
+                    document.write("Solución única: " + (-b / (2 * a)));
+                }
+                else
+                {
+                    document.write("Solución n.º1: " + (-b + Math.sqrt(delta)) /
+                    (2 * a) + "<br />");
+                    document.write("Solución n.º2: " + (-b - Math.sqrt(delta)) /
+                    (2 * a));
+                }
+            }
+        </script>
+    </body>
+</html>

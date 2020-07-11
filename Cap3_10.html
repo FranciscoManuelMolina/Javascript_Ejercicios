@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 
+    NOMBRE DEL SCRIPT: Cap3_10.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 06/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 06/07/2020
+    OBJETIVO: Calcular la media de n números reales introducidos con el teclado (la lista termina con un cero).
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+        
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap3_10</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_10</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Declaración de variables */
+            var cnt, suma, nblu, media;
+
+            /* Inicializaciones */
+            cnt = 1;
+            suma = 0.0;
+
+            /* Introducción de un primer número */
+            nblu = parseFloat(prompt("Número (0 para terminar): "));
+
+            /* Bucle de procesamiento */
+            while (nblu != 0)
+            {
+                suma = suma + parseFloat(nblu);
+                nblu = parseFloat(prompt("Número (0 para terminar): "));
+                cnt = cnt +1;
+            }
+
+            /* Visualización del resultado */
+            if (cnt == 1)
+            {
+                document.write("No se ha introducido ningún número");
+            }
+            else
+            {
+                media = suma / (cnt-1);
+                document.write("Media: " + media);
+            }
+        </script>
+    </body>
+</html>

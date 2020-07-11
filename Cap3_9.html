@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+    NOMBRE DEL SCRIPT: Cap3_9.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 06/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 06/07/2020
+    OBJETIVO: Calcular y mostrar la media de 10 números leídos con el teclado
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTMl -->
+    <head>
+
+            <!-- Etiqueta meta -->
+            <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+            <!-- Título del script HTML -->
+            <title>Cap3_9</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_9</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Declaración de variables locales */
+            var nblu, cnt, suma, media;
+
+            /* Inicializaciones */
+            cnt = 1;
+            suma = 0.0;
+
+            /* Bucle de procesamiento */
+            while (cnt<=10)
+            {
+                nblu = parseFloat(prompt("Número nº " + cnt + ": "));
+                suma = suma + parseFloat(nblu);
+                cnt = cnt + 1;
+            }
+
+            /* Visualización del resultado */
+            media = suma / 10;
+            document.write("Media: " + media);
+
+        </script>
+
+    </body>
+</html>

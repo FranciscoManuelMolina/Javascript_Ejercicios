@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap3_5.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 01/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 01/07/2020
+    OBJETIVO: Escribir un algoritmo que permita la extracción de las iniciales de una persona, cuyo apellido y nombre se introducirán 
+    con el teclado (ejemplo: AS para Ángel Sánchez).
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap3_5</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_5</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Declaración de variable locales */
+            var apellido, nombre, inicial_apellido, inicial_nombre;
+
+            /* Introducción del apellido */
+            apellido = prompt("Apellido: ");
+
+            /* Introducción del nombre */
+            nombre = prompt("Nombre: ");
+
+            /* Determinación de las iniciales */
+            /* NB: La numeración de las letras en una cadena empieza por 0 */
+            inicial_apellido = apellido.charAt(0);
+            inicial_nombre = nombre.substring(0, 1);
+
+            /* Visualización de las iniciales */
+            document.write("Las iniciales de " + nombre + " " + apellido + " son " 
+            + inicial_nombre + inicial_apellido);
+
+        </script>
+
+    </body>
+
+</html>

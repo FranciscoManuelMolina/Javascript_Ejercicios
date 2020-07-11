@@ -1,0 +1,85 @@
+<!DOCTYPE hmtl>
+<!--
+    NOMBRE DEL SCRIPT: Cap3_8.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 06/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 06/07/2020
+    OBJETIVO: Imprimir en letras, el mes correspondiente a un número introducido con el 
+    teclado (comprendido entre 1 y 12). El control de la entrada de datos no se realiza.
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+            <!-- Etiqueta meta -->
+            <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+            <!-- Título del script HTML -->
+            <title>Cap3_8</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_8</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Declaración de variables */
+            var mes;
+
+            /* Introducción del número de mes */
+            mes = parseInt(prompt("Número del mes (de 1 a 12): "));
+
+            /* Visualización del resultado */
+            switch (mes)
+            {
+                case 1:
+                    document.write("Mes n.º " + mes + ": Enero");
+                    break;
+                case 2:
+                    document.write("Mes n.º " + mes + ": Febrero");
+                    break;
+                case 3:
+                    document.write("Mes n.º " + mes + ": Marzo");
+                    break;
+                case 4:
+                    document.write("Mes n.º " + mes + ": Abril");
+                    break;
+                case 5:
+                    document.write("Mes n.º " + mes + ": Mayo");
+                    break;
+                case 6:
+                    document.write("Mes n.º " + mes + ": Junio");
+                    break;
+                case 7:
+                    document.write("Mes n.º " + mes + ": Julio");
+                    break;
+                case 8:
+                    document.write("Mes n.º " + mes + ": Agosto");
+                    break;
+                case 9:
+                    document.write("Mes n.º " + mes + ": Septiembre");
+                    break;
+                case 10:
+                    document.write("Mes n.º " + mes + ": Octubre");
+                    break;
+                case 11:
+                    document.write("Mes n.º " + mes + ": Noviembre");
+                    break;
+                case 12:
+                    document.write("mes n.º " + mes + ": Diciembre");
+                    break;
+                default:
+                    document.write("Error de entrada de datos en el número de mes");
+
+            }
+        </script>
+
+    </body>
+</html>

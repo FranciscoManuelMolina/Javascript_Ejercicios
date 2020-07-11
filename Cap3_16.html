@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap3_16.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 11/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 11/07/2020
+    OBJETIVO: LLamar a un procedimiento que muestre el doble de dos argumentos efectos, pasados como argumentos
+            (los dos argumentos se van a introducir con el teclado).
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap3_16</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_16</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Procedimiento de doblado */
+            function doblado(x, y)
+            {
+                /* Doblado */
+                x = x * 2;
+                y = y * 2;
+                /* Visualización de la dupla de valores después del doblado */
+                document.write("La dupla doblada es  (" + x + ", " + y + ")<br />");
+            }
+
+            /* Visualización del nombre del script */
+            alert("Ejercicio Procedure");
+
+            /* Declaración de variables locales */
+            var a, b, c, d;
+
+            /* Introducción de los argumentos a y b */
+            a = parseInt(prompt("Argumento a:"));
+            b = parseInt(prompt("Argumento b:"));
+
+            /* Llamada al procedimiento que dobla */
+            doblado(a, b);
+
+            /* Introducción de los argumentos c y d */
+            c = parseInt(prompt("Argumento c:"));
+            d = parseInt(prompt("Argumento d:"));
+
+            /* Llamada al procedimiento de doblado */
+            doblado(c, d);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!--
+    NOMBRE DEL SCRIPT: Cap3_3.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 30/06/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 30/06/2020
+    OBJETIVO: Calcular (y mostrar) la superficie y el volumen de una esfera cuyo radio se introduce con el teclado
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap3_3</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Ejercicio Cap3_3</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+
+            /* Mostrar el nombre del script */
+            alert("Ejercicio Cap3_3");
+
+            /* Declaración de variable locales */
+            var pi, radio, superficie, volumen;
+
+            /* Inicialización de las variables */
+            pi = 3.14;
+            radio = prompt("Radio de la esfera: ");
+
+            /* Cálculos */
+            superficie = 4 * pi * radio * radio;
+            volumen = superficie * radio / 3;
+
+            /* Mostrar los resultados */
+            document.write("Radio de la esfera: "
+            + radio + "<br/>");
+            document.write("Superficie: " + superficie
+            + "<br/>Volumen: " + volumen);
+
+        </script>
+
+        <!-- Mostrar el código fuente -->
+        <br /><br /><br />
+        <center>
+            <a href="JavaScript:window.location='view-source:' + window.location">
+                Código fuente
+            </a>
+        </center>
+    </body>
+</html>
