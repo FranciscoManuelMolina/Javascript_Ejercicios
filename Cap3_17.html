@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 
+    NOMBRE DEL SCRIPT: Cap3_17.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 11/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 11/07/2020
+    OBJETIVO: Uso de una función de cálculo de máximo de dos valores introducidos con el teclado y pasados como argumentos.
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+            <!-- Etiqueta meta -->
+            <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+            <!-- Título del script HTML -->
+            <title>Cap3_17</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Cap3_17</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+            /* Función maxi (determina el máximo de dos cifras) */
+            function maxi(x, y)
+            {
+                /* Determinación del máximo */
+                if (x > y)
+                {
+                    return x;
+                }
+                else
+                {
+                    return y;
+                }
+            }
+
+            /* Visualización del nombre del script */
+            alert("Ejercicio Función");
+
+            /* Declaración variables locales */
+            var a, b, c, d;
+
+            /* Introducción de los argumentos a y b */
+            a = parseInt(prompt("Argumento a:"));
+            b = parseInt(prompt("Argumento b:"));
+
+            /* Llamada a la función maxi */
+            alert("Maximo: " + maxi(a, b));
+
+            /* Introducción de los argumentos c y d */
+            c = parseInt(prompt("Argumento c:"));
+            d = parseInt(prompt("Argumento d:"));
+
+            /* Llamada a la función maxi */
+            document.write("Maximo: " + maxi(c, d));
+        </script>
+    </body>
+</html>
