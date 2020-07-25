@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap4_3.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 25/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 25/07/2020
+    OBJETIVO: Definición de una función constructor de nombre Coche, con una variable local no accesible desde el 
+    exterior del objeto
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Incio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+
+        <!-- Título del script HTML -->
+        <title>Cap4_3</title>
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Cap4_3</h1>
+
+        <!-- Inicio script JavaScript -->
+        <script>
+
+            /* Definición de una función constructor de nombre Coche */
+            var Coche = function()
+            {
+                /* Variable(S) local(es) no accesible(s) desde el exterior del objeto */
+                var numeroRuedas = 4;
+                /* Método(s) del objeto */
+                this.avanzar = function()
+                {
+                    document.write("avanza");
+                }
+            }
+
+            /* Instaciación de un objeto simca1100 a través del constructor Coche */
+            var simca1100 = new Coche();
+
+            /* Llamada al método avanzar del objeto simca1100 */
+            document.write("El coche simca1100 ");
+            simca1100.avanzar();
+
+            /* Intento de visualización de la variable local del constructor Coche */
+            document.write("<br />");
+            document.write("El coche simca1100 tiene " + simca1100.numeroRuedas + " ruedas");
+        </script>
+    </body>
+</html>
