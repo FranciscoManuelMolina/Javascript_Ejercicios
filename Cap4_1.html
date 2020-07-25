@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap4_1.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 25/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 25/07/2020
+    OBJETIVO: Declaración inline de un objeto JavaScript 
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+
+        <!-- Título del script HTML -->
+        <title>Cap4_1</title>
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Cap4_1</h1>
+
+        <!-- Inicio script JavaScript -->
+        <script>
+
+            /* Declaración inline de un objeto JavaScript */
+            /* NB: Esta técnica no permite la herencia a partir del objeto más adelante */
+
+            var Adicion = {
+                x: 5,
+                y: 10,
+                calculo: function()
+                {
+                    return this.x + this.y;
+                }
+            };
+
+            /* Uso del objeto Adicion */
+            document.write("Suma: " + Adicion.calculo());
+        </script>
+    </body>
+</html>

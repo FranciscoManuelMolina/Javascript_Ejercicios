@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap4_2.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 25/07/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 25/07/2020
+    OBJETIVO: Definición de una función constructor, de nombre Coche 
+-->
+
+<!-- Inicio script HTML -->
+<html>
+
+    <!-- Inicio encabezado script HTML -->
+    <head>
+
+        <!-- Etiqueta meta -->
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+
+        <!-- Título del script HTML -->
+        <title>Cap4_2</title>
+
+    </head>
+
+    <!-- Inicio sección body del script HTML -->
+    <body>
+
+        <!-- Título del procesamiento -->
+        <h1>JavaScript - Cap4_2</h1>
+
+        <!-- Inicio script Javascript -->
+        <script>
+
+            /* Definición de una función constructor, de nombre Coche */
+            var Coche = function()
+            {
+                /* Atributo(s) del objeto */
+                this.tieneMotor = true;
+                /* Método(s) del objeto */
+                this.avanzar = function()
+                {
+                    document.write("avanza");
+                }
+            }
+
+            /* Instanciación de un objeto simca1100 a través del constructor Coche */
+            var simca1100 = new Coche();
+
+            /* Visualización del atributo tieneMotor del objeto simca1100 */
+            if (simca1100.tieneMotor)
+            {
+                document.write("El coche simca1100 tiene un motor<br />");
+            }
+            else
+            {
+                document.write("El coche simca1100 no tiene motor !<br />");
+            }
+
+            /* Llamada al método avanzar del objeto simca1100 */
+            document.write("El coche simca1100 ");
+            simca1100.avanzar();
+        </script>
+    </body>
+</html>
