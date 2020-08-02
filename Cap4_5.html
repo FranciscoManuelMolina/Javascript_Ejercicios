@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+    NOMBRE DEL SCRIPT: Cap4_5.html
+    REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+    FECHA DE CREACIÓN: 02/08/2020
+    FECHA DE ÚLTIMA MODIFICACIÓN: 02/08/2020
+    OBJETIVO: Comparación de los metodos de dos objetos
+-->
+
+<!-- Inicio script HTML -->
+<html lang="es">
+
+  <!-- Inicio encabezado script HTML -->
+<head>
+
+  <!-- Etiqueta(s) meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título del script HTML -->
+  <title>Cap4_5</title>
+</head>
+
+<!-- Inicio sección body del script HTML -->
+<body>
+
+  <!-- Título del procesamiento -->
+  <h1>JavaScript - Cap4_5</h1>
+
+  <!-- Inicio script Javascript -->
+  <script>
+
+    /* Definición de una función constructor de nombre Coche */
+    var Coche = function()
+    {
+      /* Atributo(s) del objeto */
+      this.tieneMotor = true;
+      /* Método(s) del objeto */
+      this.avanzar = function()
+      {
+        document.write("avanza");
+      }
+      this.retroceder = function()
+      {
+        document.write("retrocede");
+      }
+    }
+
+    /* Instanciación de un objeto simca1100 a través del constructor Coche */
+    var simca1100 = new Coche();
+
+    /* Instanciación de un objeto renault12 a través del constructor Coche */
+    var renault12 = new Coche();
+
+    /* Comprobación de la igualdad de métodos avanzar de los objetos simca1100 y renault12 */
+    if (simca1100.avanzar == renault12.avanzar)
+    {
+      document.write("Metodo avanzar compartido por los objetos simca1100 y renault12<br />");
+    }
+    else
+    {
+      document.write("Metodo avanzar no compartido por los objetos simca1100 y renault12<br />");
+    }
+
+  </script>
+  
+</body>
+</html>
