@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 
+  NOMBRE DEL SCRIPT: Cap4_6.html
+  REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+  FECHA DE CREACIÓN: 02/08/2020
+  FECHA DE ÚLTIMA MODIFICACIÓN: 02/08/2020
+  OBJETIVO: 
+-->
+
+<!-- Incio script HTML -->
+<html lang="es">
+
+  <!-- Inicio encabezado script HTML -->
+  <head>
+
+    <!-- Etiqueta(s) meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título del script HTML -->
+    <title>Cap4_6</title>
+  </head>
+  
+  <!-- Inicio sección body del script HTML-->
+  <body>
+  
+      <!-- Título del procesamiento -->
+      <h1>JavaScript - Cap4_6</h1>
+
+      <!-- Inicio script JavaScript -->
+      <script>
+        /* Definición de una función constructor de nombre Coche */
+        /* NB: El Constructor aquí está vacio */
+        var Coche = function(){};
+
+        /* Comprobación de la existencia por defecto de una prototipo para cualquier constructor */
+        document.write("Prototipo del constructor: " + Coche.prototype);
+
+        /* Añadir un método zigzaguear al prototipo del constructor Coche */
+        Coche.prototype.zigzaguear = function()
+        {
+          document.write("zigzaguea peligrosamente<br />");
+        }
+
+        /* Instanciación de un objeto simca1100 a través del constructor Coche */
+        var simca1100 = new Coche();
+
+        /* Llamada al método zigzaguear del objeto simca1100, accesible a traves del prototipo del constructor Coche */
+        document.write("<br />¿Qué hace el simca1100? ");
+        simca1100.zigzaguear();
+
+        /* Instanciación de un objeto renault12 a través del constructor Coche */
+        var renault12 = new Coche();
+
+        /* Comprobación del método zigzaguear compartido o no, entre los objetos simca1100 y renault12 */
+        if (simca1100.zigzaguear == renault12.zigzaguear)
+        {
+          document.write("Método zigzaguear compartido por los objetos simca1100 y renault12<br />");
+        }
+        else
+        {
+          document.write("Método zigzaguear no compartido por los objetos simca1100 y renault12<br />");
+        }
+
+      </script>
+  </body>
+</html>
