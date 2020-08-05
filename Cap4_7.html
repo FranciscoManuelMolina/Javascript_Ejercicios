@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 
+  NOMBRE DEL SCRIPT: Cap4_7.html
+  REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+  FECHA DE CREACIÓN: 03/08/2020
+  FECHA DE ÚLTIMA MODIFICACIÓN: 03/08/2020
+  OBJETIVO: Sobrecarga (modificar) de un Metodo (propiedad/atributo)
+-->
+
+<!-- Inicio script HTML -->
+<html lang="es">
+
+  <!-- Inicio encabezado script HTML -->
+  <head>
+    <!-- Etiqueta meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título del script HTML -->
+    <title>Document</title>
+  </head>
+
+  <!-- Inicio sección body del script HTML -->
+  <body>
+
+    <!-- Título del procesamiento -->
+    <h1>JavaScript - Cap4_7</h1>
+  
+    <!-- Inicio script JavaScript -->
+    <script>
+
+      /* Definición de una función constructor, de nombre Coche */
+      /* NB: El constructor aquí está vacío */
+      var Coche = function() {};
+
+      /* Añadir un método cargar al prototipo del constructor Coche */
+      Coche.prototype.cargar = function()
+      {
+        document.write("carga<br />");
+      }
+
+      /* Instanciación de un objeto simca1100 a través del constructor Coche */
+      var simca1100 = new Coche();
+
+      /* Llamada al método cargar del objeto simca1100, accesible a través del prototipo del constructor Coche */
+      document.write("El simca1100 ");
+      simca1100.cargar();
+
+      /* Instanciación de un objeto renault12 a través del constructor Coche */
+      var renault12 = new Coche();
+
+      /* Modificación (sobrecarga) del método cargar para el objeto simca1100 */
+      simca1100.cargar = function()
+      {
+        document.write("carga rápidamente <br />");
+      };
+
+      /* Llamada al método cargar (sobrecargado) del objeto simca1100 */
+      document.write("El simca1100 ");
+      simca1100.cargar();
+
+      /* LLamada al método cargar (no sobrecargado) del objeto renault12 */
+      document.write("El renault12 ");
+      renault12.cargar();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 
+  NOMBRE DEL SCRIPT: Cap4_10.html
+  REALIZACIÓN INFORMÁTICA: Francisco M. Molina Jimenez
+  FECHA DE CREACIÓN: 05/08/2020
+  FECHA DE ÚLTIMA MODIFICACIÓN: 05/08/2020
+  OBJETIVO: Herencia de metodos entre dos clases y comprobación
+-->
+
+<!-- Inicio script HTML -->
+<html lang="es">
+
+  <!-- Inicio encabezado script HTML -->
+  <head>
+
+    <!-- Etiqueta meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título del script HTML -->
+    <title>Cap4_10</title>
+
+  </head>
+
+  <!-- Inicio sección body del script HTML -->
+  <body>
+
+      <!-- Título del procesamiento -->
+      <h1>JavaScript - Cap4_10</h1>
+
+      <!-- Inicio script JavaScript -->
+      <script>
+
+        /* Definición de una función constructor, de nombre Vehiculo */
+        /* NB: El constructor aquí está vacio */
+        var Vehiculo = function() {};
+
+        /* Añadir un método acelerar al prototipo del constructor Vehiculo */
+        Vehiculo.prototype.acelerar = function()
+        {
+          document.write("acelera<br />");
+        };
+
+        /* Definición de una función constructor de nombre Coche */
+        /* NB: El constructor aquí está vacío */
+        var Coche = function() {};
+
+        /* Copia todos los elementos (atributos y métodos) del prototipo del constructor Vehiculo en el prototipo del constructor Coche */
+        /* NB: Sobre todo no hacer Coche.prototype = Vehiculo.prototype porque en este caso el prototipo seria compartido */
+        for (clave in Vehiculo.prototype)
+        {
+          Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        /* Instanciación de un objeto simca1100 a través del constructor Coche */
+        var simca1100 = new Coche();
+
+        /* Constructor utilizado para la creación del objeto simca1100, ¿es Coche? */
+        document.write("simca1100 tiene como constructor Coche: ");
+        document.write(simca1100 instanceof Coche);
+
+        /* Constructor utilizado para la creación del objeto simca1100 ¿es Vehiculo? */
+        document.write("<br />simca1100 tiene como constructor Vehiculo: ");
+        document.write(simca1100 instanceof Vehiculo);
+      </script>
+  </body>
+
+</html>
